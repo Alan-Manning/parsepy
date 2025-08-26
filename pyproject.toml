@@ -1,0 +1,26 @@
+[project]
+name = "parsepy"
+requires-python = ">=3.12"
+classifiers = ["Programming Language :: Python :: Implementation :: PyPy"]
+dynamic = ["version"]
+description = "Python parsing combinator."
+readme = "README.md"
+authors = [{ name = "Alan Manning", email = "Alan_Manning@Live.co.uk" }]
+maintainers = [{ name = "Alan Manning", email = "Alan_Manning@Live.co.uk" }]
+dependencies = ["returns"]
+
+
+[project.optional-dependencies]
+dev = ["mypy", "ruff", "pytest", "pytest-markdown-docs"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.mypy]
+# plugins = ["returns.contrib.mypy.returns_plugin"]
+strict = true
+local_partial_types = true
+warn_unreachable = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_defs = false

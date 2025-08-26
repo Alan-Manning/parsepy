@@ -1,6 +1,6 @@
 from parsepy import ParseResult
 from parsepy.basic_elements import TakeWhile, TakeUntil, TakeInclude
-from returns.result import Success, Result, Failure
+from returns.result import Success, Failure
 
 
 ###############################################################################
